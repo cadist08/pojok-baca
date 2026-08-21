@@ -1,0 +1,6 @@
+{
+  "name": "Pojok Baca Desa Batursari",
+  "description": "Perpustakaan digital dan platform literasi masyarakat Desa Batursari oleh KKN Tematik UPGRIS Kelompok 47",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
