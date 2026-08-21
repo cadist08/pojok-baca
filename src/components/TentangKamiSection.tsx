@@ -13,7 +13,7 @@ import {
   Building,
   Heart
 } from 'lucide-react';
-import kknLogoImg from '../assets/images/kkn_logo_47_1786823647166.jpg';
+import kknLogoImg from '../assets/images/kkn-logo.png';
 import kknActivityImg from '../assets/images/kkn_kegiatan_literasi_1786823672568.jpg';
 
 export const TentangKamiSection: React.FC = () => {
