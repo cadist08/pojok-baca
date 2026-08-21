@@ -13,7 +13,7 @@ import {
   Building,
   Heart
 } from 'lucide-react';
-import kknLogoImg from '../assets/images/kkn-logo.png';
+import kknLogoImg from '../assets/images/kkn_logo_47_1786823647166.jpg';
 import kknActivityImg from '../assets/images/kkn_kegiatan_literasi_1786823672568.jpg';
 
 export const TentangKamiSection: React.FC = () => {
@@ -145,7 +145,7 @@ export const TentangKamiSection: React.FC = () => {
               className="w-full h-56 object-cover"
             />
             <div className="p-3.5 bg-white text-xs text-slate-700">
-              <strong>Dokumentasi Lapangan:</strong> Kolaborasi aktif mahasiswa KKN Tematik Kelompok 47 bersama generasi muda dan masyarakat Desa Batursari.
+              <strong>Kelompok 47 :</strong> Mahasiswa KKN Tematik Kelompok 47 Universitas PGRI Semarang.
             </div>
           </div>
 
@@ -172,9 +172,9 @@ export const TentangKamiSection: React.FC = () => {
           {KKN_MEMBERS.map((m) => (
             <div
               key={m.id}
-              className="p-5 rounded-2xl bg-[#FAF9F6] border border-slate-200 hover:border-[#D4AF37] hover:shadow-xs transition-all flex flex-col justify-between space-y-4"
+              className="p-5 rounded-2xl bg-[#FAF9F6] border border-slate-200 hover:border-[#D4AF37] hover:shadow-md transition-all flex flex-col justify-between space-y-4 group"
             >
-              <div className="space-y-2">
+              <div className="space-y-3.5">
                 <div className="flex items-center justify-between">
                   <span className="text-[11px] font-bold px-2.5 py-0.5 rounded-full bg-[#0A192F] text-[#D4AF37]">
                     {m.role}
@@ -182,13 +182,38 @@ export const TentangKamiSection: React.FC = () => {
                   <GraduationCap className="w-4 h-4 text-[#52B788]" />
                 </div>
 
-                <h4 className="text-base font-bold text-[#0A192F] font-display">
-                  {m.name}
-                </h4>
+                {/* Member Profile Photo & Details */}
+                <div className="flex items-center gap-3.5">
+                  <div className="relative w-14 h-14 rounded-full p-0.5 bg-gradient-to-tr from-[#D4AF37] to-[#52B788] shrink-0 shadow-xs">
+                    {m.photoUrl ? (
+                      <img
+                        src={m.photoUrl}
+                        alt={m.name}
+                        className="w-full h-full object-cover rounded-full bg-slate-200"
+                        onError={(e) => {
+                          // Fallback to avatar placeholder if image fails to load
+                          (e.target as HTMLElement).style.display = 'none';
+                        }}
+                      />
+                    ) : (
+                      <div className="w-full h-full rounded-full bg-[#0A192F] text-[#D4AF37] font-bold text-base flex items-center justify-center">
+                        {m.name.charAt(0)}
+                      </div>
+                    )}
+                  </div>
 
-                <p className="text-xs text-[#2D5A27] font-medium">
-                  {m.major}
-                </p>
+                  <div className="min-w-0">
+                    <h4 className="text-base font-bold text-[#0A192F] font-display group-hover:text-[#2D5A27] transition-colors truncate">
+                      {m.name}
+                    </h4>
+                    <p className="text-xs text-[#2D5A27] font-medium truncate">
+                      {m.major}
+                    </p>
+                    <p className="text-[10px] text-slate-500 font-mono">
+                      UPGRIS 2024/2025
+                    </p>
+                  </div>
+                </div>
               </div>
 
               {m.quote && (

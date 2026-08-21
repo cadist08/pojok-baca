@@ -41,10 +41,10 @@ export const KKN_INFO = {
 export const KKN_MEMBERS: KKNMember[] = [
   {
     id: 'm1',
-    name: 'Muhammad Farhan',
+    name: 'Tiara Wahyu Aulia',
     role: 'Ketua Kelompok 47',
-    major: 'Pendidikan Bahasa & Sastra Indonesia',
-    quote: 'Membangun peradaban desa yang maju selalu diawali dari terbukanya jendela ilmu dan minat baca.'
+    major: 'Pendidikan Guru Sekolah Dasar (PGSD)',
+    quote: '23120352',
   },
   {
     id: 'm2',
